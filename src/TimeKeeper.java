@@ -6,7 +6,7 @@ public class TimeKeeper{
 	
 	/**
 	 * 
-	 * @param duration in milliseconds.
+	 * @param duration in milliseconds
 	 */
 	public TimeKeeper(long duration){
 		setDuration(duration);
@@ -15,8 +15,9 @@ public class TimeKeeper{
 	
 	/**
 	 * 
-	 * @param duration in milliseconds.
+	 * @param duration in milliseconds
  	 * @param paused
+ 	 * 
 	 */
 	
 	public TimeKeeper(long duration, boolean paused){
@@ -59,7 +60,10 @@ public class TimeKeeper{
 			return false;
 		}
 	}
-	
+	/**
+	 * 
+	 * @return in milliseconds 
+	 */
 	public long timeLeft(){
 		
 		if(!paused){
@@ -71,6 +75,11 @@ public class TimeKeeper{
 	public boolean isPaused() {
 		return paused;
 	}
+	
+	/**
+	 * 
+	 * @param duration in milliseconds
+	 */
 	public void startNew(long duration){
 		if(duration > 0){
 			reset();
@@ -89,7 +98,7 @@ public class TimeKeeper{
 	public void pause() {
 		this.paused = true;
 	}
-
+	
 	private void setDuration(long duration){
 		if(!run){
 			if(duration > 0){
